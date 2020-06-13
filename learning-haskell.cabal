@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0d51acfbf74eaf182d5fab1f1409ae597a2cb3feaa5be7dabb457ced1cab030d
+-- hash: 6b6274052c3c44a6dbb24e607609b0e564dc004a75139a02f4470d6f990c9cbb
 
 name:           learning-haskell
 version:        0.1.0.0
@@ -31,6 +31,7 @@ library
       FPCourse.Speller
       FPCourse.Tree
       Lib
+      NNHP.Lists
   other-modules:
       Paths_learning_haskell
   hs-source-dirs:
