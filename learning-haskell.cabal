@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6b6274052c3c44a6dbb24e607609b0e564dc004a75139a02f4470d6f990c9cbb
+-- hash: 266723806b82e1e1118a2d648e4549d1899bc11f2a2374e9993e81054f935c68
 
 name:           learning-haskell
 version:        0.1.0.0
@@ -27,17 +27,26 @@ source-repository head
 
 library
   exposed-modules:
+      Expr
       FPCourse.GuessingGame
+      FPCourse.JSONTypes
+      FPCourse.PersonRecord
+      FPCourse.ShowParser
       FPCourse.Speller
+      FPCourse.TagParser
       FPCourse.Tree
       Lib
       NNHP.Lists
+      Parser
   other-modules:
       Paths_learning_haskell
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , parsec
   default-language: Haskell2010
 
 executable learning-haskell-exe
@@ -48,8 +57,11 @@ executable learning-haskell-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
     , learning-haskell
+    , parsec
   default-language: Haskell2010
 
 test-suite learning-haskell-test
@@ -61,6 +73,9 @@ test-suite learning-haskell-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
     , learning-haskell
+    , parsec
   default-language: Haskell2010

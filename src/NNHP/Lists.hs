@@ -35,3 +35,20 @@ myReverse = foldl (flip (:)) []
 isPalindrome :: (Eq a) => [a] -> Bool
 isPalindrome [] = True
 isPalindrome xs = xs == myReverse xs
+
+f :: Double -> String
+f c = if (let t = c * 9 / 5 in t + 32) <= (-459.67)
+    then "really cold"
+    else "It is not that cold"
+
+doSomething x | x < 3     = report "less than three"
+              | otherwise = report "normal"
+    where report str = "the input is " ++ str
+
+absolute x | x < 0     = -x
+           | otherwise = x
+
+return42 :: IO () -> Int
+return42 _ = 42
+
+myPrint str = return42 (print str)
