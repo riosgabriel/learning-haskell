@@ -26,10 +26,3 @@ mkJObj jVals =
         combinedMap = Data.Map.unions listOfMaps
     in
         JObject combinedMap
-
-f :: a -> b
-g :: b -> c
-v :: a
-
-v = h f g
-

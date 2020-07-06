@@ -1,6 +1,10 @@
-module Lib
-    ( someFunc
-    ) where
+module Lib where
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
+
+memoizedFib :: Int -> Integer
+memoizedFib = (map fib [0 ..] !!)
+   where fib 0 = 0
+         fib 1 = 1
+         fib n = memoizedFib (n-2) + memoizedFib (n-1)
